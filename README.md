@@ -1,1 +1,4 @@
 # cms-group-h
+## Project Wordpress Nhóm H - Phan Thanh Nhuần (Chủ trì - Giảng viên Hướng dẫn)
+
+Tất cả khi code tạo **Branch** từ **Branch** **devolop** -> Branch chức năng, không [Push](https://www.atlassian.com/git/tutorials/syncing/git-push#:~:text=The%20git%20push%20command%20is,exports%20commits%20to%20remote%20branches.) , [Commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit#:~:text=The%20git%20commit%20command%20captures,you%20explicitly%20ask%20it%20to.), bất kỳ gì trên **Main**, khi code [Pull](https://www.atlassian.com/git/tutorials/syncing/git-pull#:~:text=The%20git%20pull%20command%20is,Git%2Dbased%20collaboration%20work%20flows.) liên tục để xem thay đổi trước khi [Commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit#:~:text=The%20git%20commit%20command%20captures,you%20explicitly%20ask%20it%20to.) hoặc [Mergre](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
