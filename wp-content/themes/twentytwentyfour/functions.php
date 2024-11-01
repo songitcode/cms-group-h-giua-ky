@@ -204,8 +204,6 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
-<<<<<<< HEAD
-=======
 
 // Bắt đầu thêm đoạn mã của bạn
 function enqueue_custom_footer_styles()
@@ -225,4 +223,3 @@ function enqueue_bootstrap_assets()
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_assets');
->>>>>>> 3-Footer-NguyenSon
