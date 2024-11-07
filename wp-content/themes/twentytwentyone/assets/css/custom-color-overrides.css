@@ -3,3 +3,45 @@
  *
  * This file is automatically populated if the user chooses custom colors in the Customizer.
  */
+.comment-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.comment-box .media-left {
+    padding-right: 10px;
+    width: 65px;
+}
+
+.comment-box .media-body p {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.comment-box .media-heading {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(221, 221, 221);
+    padding: 7px 10px;
+    position: relative;
+    margin-bottom: -1px;
+}
+
+.comments-area.show-avatars .avatar {
+    border-radius: 0 !important;
+    position: relative !important;
+    top: 0;
+}
+
+.comment-box .media-heading::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(221, 221, 221);
+    border-width: 1px 0 0 1px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    left: -6px;
+}
