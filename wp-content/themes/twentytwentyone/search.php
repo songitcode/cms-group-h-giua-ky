@@ -83,7 +83,6 @@ $months = array(
 );
 get_header();
 
-<<<<<<< HEAD
 if (have_posts()) {
 	?>
 	<div class="container">
@@ -150,7 +149,6 @@ if (have_posts()) {
 } else {
 	get_template_part('template-parts/content/content-none');
 }
-=======
 // Add the news container code above the search results loop
 ?>
 
@@ -326,7 +324,6 @@ while ( have_posts() ) {
 
 // Previous/next page navigation.
 twenty_twenty_one_the_posts_navigation();
->>>>>>> 13-Pages-MinhTam
 
 get_footer();
 ?>
