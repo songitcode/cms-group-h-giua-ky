@@ -166,51 +166,8 @@ body {
 
 	<div class="container-fluid post-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
-			<div class="col-md-3">
-				<ul class="list-group">
-					<h3 style="font-weight: 900; margin: 15px 15px;">Categories</h3>
-					<div class="crossedbg"></div>
-					<?php
-					$categories = get_categories();
-					foreach ($categories as $category) {
-						$category_link = get_category_link($category->term_id);
-						echo '<li class="list-group-item"><a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a></li>';
-					}
-					?>
-				</ul>
-			</div>
 			<div class="col-md-6">
 				<div class="row title">
-					<div class="col-md-10 col-xs-9">
-						<?php the_title('<h1 class="entry-title" style="margin-top: 7px">', '</h1>'); ?>
-						<?php twenty_twenty_one_post_thumbnail(); ?>
-					</div>
-					<div class="col-md-2 col-xs-3">
-						<div class="headlinesdate" style="margin-top: 7px">
-							<div class="headlinesdm" style="margin-top: 7px">
-								<div class="headlinesday"> <?php the_date('d', '<span class="day">', '</span>'); ?>
-								</div>
-								<div class="headlinesmonth"> <?php
-								$month_number = get_the_date('n'); // Lấy số tháng (1-12)
-								
-								// Chuyển đổi số tháng thành chữ số tương ứng
-								$month_name = date('m', mktime(0, 0, 0, $month_number, 10));
-
-								echo '<span class="month">' . $month_name . '</span>'; // Hiển thị số tháng
-								?>
-
-								</div>
-							</div>
-
-							<div class="headlinesyear"> <?php
-							$full_year = get_the_date('Y'); // Lấy năm đầy đủ
-							$short_year = substr($full_year, -2); // Lấy hai số cuối cùng
-							
-							echo '<span class="year">\'' . $short_year . ' </span>'; // Hiển thị năm hai số cuối
-							?>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
