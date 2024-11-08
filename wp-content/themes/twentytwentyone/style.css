@@ -1144,7 +1144,6 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 .site textarea {
-	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
 	line-height: var(--global--line-height-body);
@@ -5917,4 +5916,25 @@ footer {
 
 .is-IE .post-thumbnail .wp-post-image {
 	min-width: auto;
+}
+
+/*comment*/
+.float-right{
+	margin-top: 15px;
+}
+
+.card{
+	padding: 0;
+}
+
+.comment-reply-title{
+	font-size: x-large;
+}
+.card.custom-width {
+	max-width: 90%; /* Option 1: Set to 90% of the page width */
+	width: 800px;    /* Option 2: Set to a fixed width of 800px */
+	margin: auto;
+}
+.card-body{
+	margin-top: -40px !important;
 }
