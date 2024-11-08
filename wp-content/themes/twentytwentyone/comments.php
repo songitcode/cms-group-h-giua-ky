@@ -73,11 +73,11 @@ $twenty_twenty_one_comment_count = get_comments_number();
                             'title_reply'          => '',  // Removes default title
                             'label_submit'         => __('Share', 'twentytwentyone'),  // Button text changed to 'Share'
                             'comment_field'        => '<textarea id="comment" name="comment" rows="3" class="form-control" placeholder="What are you thinking..."></textarea>',
-                            'class_submit'         => 'btn btn-primary',
+                            'class_submit'         => 'btn btn-info',
                             'comment_notes_before' => '',  // Removes "Required fields" message
                             'comment_notes_after'  => '',  // Removes additional notes after the comment field
                             'logged_in_as'         => '',  // Removes "Logged in as" message
-                            'submit_button'        => '<button type="submit" class="btn btn-primary float-right">%2$s</button>',  // Aligns "Share" button to the right
+                            'submit_button'        => '<button type="submit" class="btn btn-info float-right">Share</button>',  // Aligns "Share" button to the right
                         )
                     );
                     ?>

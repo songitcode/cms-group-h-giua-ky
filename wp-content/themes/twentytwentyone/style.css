@@ -5938,3 +5938,6 @@ footer {
 .card-body{
 	margin-top: -40px !important;
 }
+.btn-info{
+	background-color: #21759b !important;
+}
