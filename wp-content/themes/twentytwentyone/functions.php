@@ -683,3 +683,13 @@ function enqueue_bootstrap_assets()
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_assets');
+
+function custom_enqueue_styles()
+{
+	// Đảm bảo chỉ tải CSS nếu file tồn tại
+	if (file_exists(get_template_directory() . '/assets/css/custom-content.css')) {
+		wp_enqueue_style('custom-content', get_template_directory_uri() . '/assets/css/custom-content.css');
+	}
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_styles');
+
