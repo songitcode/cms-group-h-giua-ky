@@ -62,6 +62,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 			<?php else: ?>
 				<?php
 				printf(
+
 					esc_html(_nx('%s comment', '%s comments', $twenty_twenty_one_comment_count, 'Comments title', 'twentytwentyone')),
 					esc_html(number_format_i18n($twenty_twenty_one_comment_count))
 >>>>>>> 7-Prev_Next_Post-MinhTam
@@ -158,6 +159,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 =======
 
 <?php
+
 function custom_comment_output($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
