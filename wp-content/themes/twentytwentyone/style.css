@@ -1144,7 +1144,6 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 .site textarea {
-	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
 	line-height: var(--global--line-height-body);
@@ -5917,4 +5916,8 @@ footer {
 
 .is-IE .post-thumbnail .wp-post-image {
 	min-width: auto;
+}
+
+.text-right{
+	margin-top: 15px;
 }
