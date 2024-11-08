@@ -24,16 +24,12 @@
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Recent Posts</h5>
+					<h5>Comments</h5>
 					<ul class="list-unstyled quick-links-f">
 						<?php
-						// Query các bài viết gần đây
-						$recent_posts = wp_get_recent_posts(array(
-							'numberposts' => 5,
-							'post_status' => 'publish'
-						));
-						foreach ($recent_posts as $post) {
-							echo '<li><a href="' . get_permalink($post['ID']) . '"><i class="fa fa-angle-double-right"></i> ' . $post['post_title'] . '</a></li>';
+						$comments = get_comments();
+						foreach ($comments as $comment) {
+							echo '<li><a href="' . get_comment_link($comment->comment_ID) . '"><i class="fa fa-angle-double-right"></i> ' . $comment->comment_content . '</a></li>';
 						}
 						?>
 					</ul>
@@ -51,12 +47,16 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Comments</h5>
+					<h5>Recent Posts</h5>
 					<ul class="list-unstyled quick-links-f">
 						<?php
-						$comments = get_comments();
-						foreach ($comments as $comment) {
-							echo '<li><a href="' . get_comment_link($comment->comment_ID) . '"><i class="fa fa-angle-double-right"></i> ' . $comment->comment_content . '</a></li>';
+						// Query các bài viết gần đây
+						$recent_posts = wp_get_recent_posts(array(
+							'numberposts' => 5,
+							'post_status' => 'publish'
+						));
+						foreach ($recent_posts as $post) {
+							echo '<li><a href="' . get_permalink($post['ID']) . '"><i class="fa fa-angle-double-right"></i> ' . $post['post_title'] . '</a></li>';
 						}
 						?>
 					</ul>
