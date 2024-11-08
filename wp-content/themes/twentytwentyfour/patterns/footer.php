@@ -7,8 +7,8 @@
 					<?php
 					// Query các bài viết gần đây
 					$recent_posts = wp_get_recent_posts(array(
-						'numberposts' => 5, // Số lượng bài viết muốn hiển thị
-						'post_status' => 'publish' // Chỉ lấy các bài viết đã xuất bản
+						'numberposts' => 5,
+						'post_status' => 'publish'
 					));
 					foreach ($recent_posts as $post) {
 						echo '<li><a href="' . get_permalink($post['ID']) . '"><i class="fa fa-angle-double-right"></i> ' . $post['post_title'] . '</a></li>';
@@ -23,7 +23,6 @@
 					// Lấy danh sách các danh mục
 					$categories = get_categories();
 					foreach ($categories as $category) {
-						// Hiển thị tên danh mục và đường dẫn đến trang archive của danh mục đó
 						echo '<li><a href="' . get_category_link($category->term_id) . '"><i class="fa fa-angle-double-right"></i> ' . $category->name . '</a></li>';
 					}
 					?>
@@ -35,8 +34,8 @@
 					<?php
 					// Query các bài viết gần đây
 					$recent_posts = wp_get_recent_posts(array(
-						'numberposts' => 5, // Số lượng bài viết muốn hiển thị
-						'post_status' => 'publish' // Chỉ lấy các bài viết đã xuất bản
+						'numberposts' => 5,
+						'post_status' => 'publish'
 					));
 					foreach ($recent_posts as $post) {
 						echo '<li><a href="' . get_permalink($post['ID']) . '"><i class="fa fa-angle-double-right"></i> ' . $post['post_title'] . '</a></li>';
@@ -64,9 +63,9 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-				<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is
-					a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp,
-					Minneapolis, MN]</p>
+				<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a
+					Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis,
+					MN]</p>
 				<p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com"
 						target="_blank">Sunlimetech</a></p>
 			</div>
