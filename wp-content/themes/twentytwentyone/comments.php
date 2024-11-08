@@ -103,7 +103,7 @@ function custom_comment_output($comment, $args, $depth) {
 					</a>
 				</div>
 				<div class="media-body">
-					<h4 class="media-heading"><?php comment_author(); ?></h4>
+					<h4 class="media-heading" style="background: #F5F5F5;"><?php comment_author(); ?></h4>
 					<?php comment_text(); ?>
 					<?php
 					comment_reply_link(
