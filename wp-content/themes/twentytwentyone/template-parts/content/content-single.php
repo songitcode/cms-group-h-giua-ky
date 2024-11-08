@@ -1,101 +1,122 @@
 <style>
+	/* Toàn bộ body */
 	body {
 		font-size: 16px;
-		/* Tăng kích thước chữ của toàn bộ body */
 		font-family: 'Open Sans', sans-serif;
 		background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
 	}
 
+	/* Tiêu đề bài viết */
 	.entry-title {
 		font-size: 40px !important;
-		/* Tăng kích thước chữ của tiêu đề */
 		font-weight: bold !important;
 	}
 
+	/* Các chi tiết của tiêu đề */
 	.detail .entry-title {
 		border: none;
 		margin-top: 45px;
 	}
 
+	/* Dòng phân cách */
 	.overviewline {
 		border-bottom: 1px solid #cecece;
 		margin: 25px 0 15px;
 		position: relative;
 	}
 
-	.headlinesdate {
+	/* Ngày tháng tiêu đề */
+	.headlinesdate-top {
 		background: #f5ce31;
 		border-radius: 50%;
 		padding: 10px 17px;
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-	}
-
-	.headlinesdate .headlinesdm,
-	.news>.headlines .headlinesdate,
-	.headlinesdate {
 		float: left;
 		font-family: 'Prata', serif;
+		display: flex;
 	}
 
-	.headlinesdate .headlinesyear {
+	/* Chi tiết năm */
+	.headlinesdate-top .headlinesyear-top {
 		line-height: 3.5em;
 		float: left;
 		margin-left: 3px;
 	}
 
+	/* Nội dung tổng quan */
 	.detail .overview {
 		font-size: 18px;
-		/* Tăng kích thước chữ của phần overview */
 		font-style: italic;
 		margin: 15px 0;
 		text-align: justify;
 	}
 
-	.col-md-6 {
+	/* Ảnh nền cho các cột */
+	.col-md-6,
+	.col-md-3 {
 		background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
 	}
 
+	/* Đường kẻ dưới cho ngày tháng */
 	.headlinesday {
 		border-bottom: 1px solid #000;
 	}
 
+	/* Nội dung chính */
 	.detail .maincontent {
 		font-size: 18px;
-		/* Tăng kích thước chữ của phần maincontent */
 		margin: 20px 0;
 		text-align: justify;
 		line-height: 1.7em;
 	}
 
+	/* Danh sách nhóm */
 	.list-group {
 		list-style: disc;
 		margin-bottom: 0;
+		width: 100%;
+		position: relative;
 	}
 
+	/* Background chéo */
+	.crossedbg {
+		background-image: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png);
+		position: absolute;
+		top: 27%;
+		bottom: 64%;
+		right: 15px;
+		left: 15px;
+		z-index: 1;
+	}
+
+	/* Phần tử trong danh sách */
 	.list-group-item {
 		border: none !important;
-		border-bottom: 2px #d9d9d9 solid !important;
-		margin-bottom: 0;
+		border-bottom: 2px solid #d9d9d9 !important;
+		margin: 0 15px;
 		padding-left: 0;
 		padding-right: 0;
-		margin: 0 15px;
+		position: relative;
 	}
 
+	/* Bullet cho danh sách */
 	.list-group-item:before {
 		font-family: Arial, Helvetica, sans-serif;
 		color: #f5ce31;
 		content: "\2022";
 		font-size: 2.5em;
-		/* Tăng kích thước chấm bullet */
 		padding-right: 0.5em;
 		position: relative;
-		top: 0.15em;
+		top: 0.10em;
+		left: 3%;
 	}
 
+	/* Loại bỏ đường viền cho phần tử cuối cùng */
 	.list-group-item:last-child {
 		border: none;
 	}
 
+	/* Bố cục tiêu đề tin tức */
 	.list_news .headlines {
 		background: #fff;
 	}
@@ -112,6 +133,7 @@
 		padding: 0;
 	}
 
+	/* Căn chỉnh tiêu đề */
 	.headlines ul>li {
 		overflow: hidden;
 		display: table;
@@ -121,16 +143,14 @@
 
 	.headlines .headlinesdates {
 		font-size: 1em;
-		/* Tăng kích thước chữ của ngày tháng */
 		width: 15%;
 		min-width: 55px;
 		display: table-cell;
 		vertical-align: middle;
 	}
 
-	.headlinesdates .headlinesdms,
-	.news>.headlines .headlinesdates,
-	.headlinesdates {
+	/* Dòng ngày tháng */
+	.headlinesdates .headlinesdms {
 		float: left;
 		font-family: 'Prata', serif;
 	}
@@ -139,50 +159,29 @@
 		border-bottom: 1px solid #fff;
 	}
 
-	.headlinesdates .headlinesdays,
-	.news>.headlines .headlinesmonths {
+	.headlinesdates .headlinesdays {
 		line-height: 1.7em;
 	}
 
+	/* Năm */
 	.headlinesdates .headlinesyears {
 		line-height: 3.5em;
 		float: left;
 		margin-left: 3px;
 	}
 
+	/* Tiêu đề tin tức */
 	.headlines ul>li>.headlinestitles {
 		display: table-cell;
 		vertical-align: middle;
-		width: 95%;
+		width: 85%;
 	}
 
 	.list_news .headlines a {
 		color: #000;
 	}
 
-	.row {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.container-fluid {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	/* Recent Post CSS */
-	.view-all-news a:hover {
-		color: #fff;
-	}
-
-	.view-all-news a {
-		color: #fff;
-		font-size: 16px;
-		font-weight: bold;
-	}
-
+	/* Bố cục Recent Post */
 	.view-all-news {
 		width: 100%;
 		background: #62C6C8;
@@ -191,6 +190,17 @@
 		padding: 15px;
 	}
 
+	.view-all-news a {
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.view-all-news a:hover {
+		color: #fff;
+	}
+
+	/* Tiêu đề tùy chỉnh */
 	.custom-headlines {
 		background-color: #56BDBF;
 		padding: 10px;
@@ -207,7 +217,6 @@
 	.custom-headlines-item {
 		display: flex;
 		align-items: center;
-
 		padding: 10px 0;
 	}
 
@@ -216,12 +225,10 @@
 		align-items: center;
 		margin-right: 15px;
 		text-align: center;
-
 		color: white;
 	}
 
 	.custom-headlines-dm {
-
 		padding: 5px;
 		border-radius: 3px;
 	}
@@ -254,17 +261,21 @@
 
 	.custom-headlines-title a:hover {
 		color: #ffeb3b;
-		/* Màu chữ khi hover */
 	}
 
 	.custom-headlines-item:last-child {
 		border-bottom: none;
-		/* Bỏ đường gạch ngang cuối cùng */
+	}
+
+	/* Đặt lại footer */
+	footer {
+		clear: both;
+		background-color: #333;
+		color: #fff;
 	}
 </style>
 
 <body>
-
 	<div class="container-fluid post-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
 			<div class="col-md-3">
@@ -287,35 +298,37 @@
 						<?php twenty_twenty_one_post_thumbnail(); ?>
 					</div>
 					<div class="col-md-2 col-xs-3">
-						<div class="headlinesdate" style="margin-top: 7px">
-							<div class="headlinesdm" style="margin-top: 7px">
-								<div class="headlinesday"> <?php the_date('d', '<span class="day">', '</span>'); ?>
+						<div class="headlinesdate-top" style="margin-top: 7px">
+							<div class="headlinesdm-top" style="margin-top: 7px">
+								<div class="headlinesday-top">
+									<?php the_date('d', '<span class="day">', '</span>'); ?>
 								</div>
-								<div class="headlinesmonth"> <?php
-								$month_number = get_the_date('n'); // Lấy số tháng (1-12)
-								
-								// Chuyển đổi số tháng thành chữ số tương ứng
-								$month_name = date('m', mktime(0, 0, 0, $month_number, 10));
+								<div class="headlinesmonth-top">
+									<?php
+									$month_number = get_the_date('n'); // Lấy số tháng (1-12)
+									
+									// Chuyển đổi số tháng thành chữ số tương ứng
+									$month_name = date('m', mktime(0, 0, 0, $month_number, 10));
 
-								echo '<span class="month">' . $month_name . '</span>'; // Hiển thị số tháng
-								?>
-
+									echo '<span class="month">' . $month_name . '</span>'; // Hiển thị số tháng
+									?>
 								</div>
 							</div>
 
-							<div class="headlinesyear"> <?php
-							$full_year = get_the_date('Y'); // Lấy năm đầy đủ
-							$short_year = substr($full_year, -2); // Lấy hai số cuối cùng
-							
-							echo '<span class="year">\'' . $short_year . ' </span>'; // Hiển thị năm hai số cuối
-							?>
+							<div class="headlinesyear-top">
+								<?php
+								$full_year = get_the_date('Y'); // Lấy năm đầy đủ
+								$short_year = substr($full_year, -2); // Lấy hai số cuối cùng
+								
+								echo '<span class="year">\'' . $short_year . ' </span>'; // Hiển thị năm hai số cuối
+								?>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="overviewline"></div>
+						<div class="overviewline">HELLO WORLD</div>
 					</div>
 				</div>
 				<div class="row maincontent">
@@ -410,7 +423,7 @@
 								<ul>
 									<li>
 										<div class="headlinesdates">
-											<div class="headlinesdms">
+											<div class="headlinesdms m-0">
 												<div class="headlinesdays"><?php echo $post_date = get_the_date('d'); ?></div>
 												<div class="headlinesmonths"><?php echo $post_date = get_the_date('m'); ?></div>
 											</div>
