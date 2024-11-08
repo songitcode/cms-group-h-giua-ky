@@ -1,0 +1,159 @@
+	/* General reset and font adjustments */
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f5f5f5; /* Light background */
+        color: #333; /* Dark text color */
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    a:hover,
+    a:focus {
+        color: #0056b3;
+    }
+
+    /* Header styling */
+    .site-header {
+        background-color: #ffffff; /* White background */
+        color: #333;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .site-title a {
+        color: #007bff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .site-title a:hover {
+        color: #0056b3;
+    }
+
+    /* Search Form */
+    .search-form-wrapper {
+        margin-left: 2rem;
+    }
+
+    .search-form-wrapper input[type="search"] {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: #333;
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 250px;
+    }
+
+    .search-form-wrapper input[type="search"]:focus {
+        outline-color: #007bff;
+    }
+
+    /* Navigation menu */
+    .primary-menu-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .primary-menu-wrapper ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .primary-menu-wrapper li {
+        margin-left: 1rem;
+    }
+
+    .primary-menu-wrapper a {
+        color: #333;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .primary-menu-wrapper a:hover,
+    .primary-menu-wrapper a:focus {
+        color: #0056b3;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+    }
+
+    /* Toggle for search and about-us dropdown */
+    .header-toggles {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-toggle-wrapper button,
+    .about-us-toggle button {
+        background-color: transparent;
+        color: #333;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .search-toggle-wrapper button:hover,
+    .about-us-toggle button:hover {
+        color: #007bff;
+    }
+
+    /* Dropdown menu */
+    .about-us-toggle .dropdown-menu {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .about-us-toggle .dropdown-menu a {
+        padding: 1rem;
+        color: #333;
+    }
+
+    .about-us-toggle .dropdown-menu a:hover {
+        background-color: #f0f0f0;
+        color: #007bff;
+    }
+
+    /* Button and button focus styles */
+    button,
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover,
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    button:focus,
+    .btn-primary:focus {
+        outline: 3px solid #007bff;
+    }
+
+    /* Focus styles */
+    :focus {
+        outline: 3px solid #007bff;
+        outline-offset: 2px;
+    }
