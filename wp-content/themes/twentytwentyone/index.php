@@ -24,6 +24,7 @@ get_header(); ?>
 
 
 <?php
+<<<<<<< HEAD
 get_template_part('patterns/post-list');
 
 // if (have_posts()) {
@@ -31,6 +32,16 @@ get_template_part('patterns/post-list');
 // 	// Load posts loop.
 // 	while (have_posts()) {
 // 		the_post();
+=======
+if (have_posts()) {
+
+	// Load posts loop.
+	while (have_posts()) {
+		the_post();
+
+		get_template_part('template-parts/content/content', get_theme_mod('display_excerpt_or_full_post', 'excerpt'));
+	}
+>>>>>>> 4-Search-QuangDinh
 
 // 		get_template_part('template-parts/content/content', get_theme_mod('display_excerpt_or_full_post', 'excerpt'));
 // 	}
@@ -38,7 +49,12 @@ get_template_part('patterns/post-list');
 // 	// Previous/next page navigation.
 // 	twenty_twenty_one_the_posts_navigation();
 
+<<<<<<< HEAD
 // } else {
+=======
+	// If no content, include the "No posts found" template.
+	get_template_part('template-parts/content/content-none');
+>>>>>>> 4-Search-QuangDinh
 
 // 	// If no content, include the "No posts found" template.
 // 	get_template_part('template-parts/content/content-none');

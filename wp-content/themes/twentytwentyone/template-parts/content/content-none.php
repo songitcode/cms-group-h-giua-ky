@@ -10,15 +10,47 @@
  */
 
 ?>
+<style>
+	.page-header {
+		border: none !important;
+		margin-bottom: 0px !important;
+		padding-bottom: 30px !important;
+	}
 
+	.page-title {
+		text-align: center;
+		font-size: 50px !important;
+		color: black;
+		font-weight: 700 !important;
+	}
+
+	.page-content {
+		margin-top: 0px !important;
+
+	}
+
+
+	.page-title:before {
+		content: "Search:";
+		color: red;
+	}
+</style>
 <section class="no-results not-found">
 	<header class="page-header alignwide">
 		<?php if (is_search()): ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4-Search-QuangDinh
 			<h1 class="page-title">
 				<?php
 				printf(
 					/* translators: %s: Search term. */
+<<<<<<< HEAD
 					esc_html__('Results for "%s"', 'twentytwentyone'),
+=======
+					esc_html__('"%s"', 'twentytwentyone'),
+>>>>>>> 4-Search-QuangDinh
 					'<span class="page-description search-term">' . esc_html(get_search_query()) . '</span>'
 				);
 				?>
@@ -31,7 +63,7 @@
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
-	<div class="page-content default-max-width">
+	<div class="page-content">
 
 		<?php if (is_home() && current_user_can('publish_posts')): ?>
 
@@ -52,7 +84,12 @@
 
 		<?php elseif (is_search()): ?>
 
+<<<<<<< HEAD
 			<p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentytwentyone'); ?>
+=======
+			<p style="text-align: center" class="default-max-width">
+				<?php esc_html_e('We could not find any result for your search. You can give it another try through the search form below', 'twentytwentyone'); ?>
+>>>>>>> 4-Search-QuangDinh
 			</p>
 			<?php get_search_form(); ?>
 

@@ -86,6 +86,7 @@ get_header();
 if (have_posts()) {
 	?>
 	<div class="container">
+		<?php get_template_part('template-parts/content/content-none'); ?>
 		<header class="page-header alignwide">
 			<h1 class="page-title">
 				<?php printf(esc_html__('Results for "%s"', 'twentytwentyone'), '<span class="page-description search-term">' . esc_html(get_search_query()) . '</span>'); ?>
@@ -246,7 +247,12 @@ if (have_posts()) {
 <?php
 if (have_posts()):
 	?>
+<<<<<<< HEAD
 	<!-- <div class="container-fluid">
+=======
+
+	<div class="container-fluid">
+>>>>>>> 4-Search-QuangDinh
 		<div class="row">
 			<div class="col-12">
 				<h1>Trang mới nhất</h1>
@@ -258,6 +264,7 @@ if (have_posts()):
 						'offset' => 1,
 						'order' => 'DESC',
 					);
+<<<<<<< HEAD
 
 					$query = new WP_Query($args);
 					if ($query->have_posts()):
@@ -291,6 +298,40 @@ if (have_posts()):
 <?php
 else:
 	get_template_part('template-parts/content/content-none');
+=======
+
+					$query = new WP_Query($args);
+					if ($query->have_posts()):
+						$counter = 0;
+						while ($query->have_posts()):
+							$query->the_post();
+							if ($counter == 0) {
+								$counter++;
+								continue;
+							}
+							?>
+							<div class="news-item">
+								<div class="card">
+									<?php if (has_post_thumbnail()): ?>
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="card-img-top" alt="...">
+									<?php endif; ?>
+									<div class="card-body">
+										<h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<p class="card-text"><?php the_excerpt(); ?></p>
+									</div>
+								</div>
+							</div>
+						<?php endwhile;
+						wp_reset_postdata();
+					endif; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php
+
+>>>>>>> 4-Search-QuangDinh
 endif;
 
 get_footer();
