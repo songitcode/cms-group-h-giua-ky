@@ -49,7 +49,7 @@ $twentytwentyone_aria_label = !empty($args['aria_label']) ? 'aria-label="' . esc
 				<form class="search-card">
 					<div class="search-card-body">
 						<div class="search-icon">
-							<i class="fas fa-search h4 text-body"></i>
+							<i class="fas fa-search"></i>
 						</div>
 						<div class="search-input-col">
 							<input type="search" id="<?php echo esc_attr($twentytwentyone_unique_id); ?>"
