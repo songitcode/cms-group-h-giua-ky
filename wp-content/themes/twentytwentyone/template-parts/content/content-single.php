@@ -71,44 +71,54 @@
 	}
 
 	/* Danh sách nhóm */
-	.list-group {
-		list-style: disc;
-		margin-bottom: 0;
-		width: 100%;
-		position: relative;
+	.col-md-3 .list-group {
+		background-color: #f8f8f8;
+
+		padding: 20px;
+		border: 1px solid #e0e0e0;
+		margin-top: 30px;
 	}
 
-	/* Background chéo */
+	.col-md-3 .list-group-item {
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+		border: none;
+		border-bottom: 1px solid #a5a5a5;
+		background: none;
+	}
+
+	.col-md-3 .list-group-item:last-child {
+		border-bottom: none;
+	}
+
+	/* Bullet for List Items */
+	.col-md-3 .list-group-item:before {
+		content: '•';
+		color: #ffc107;
+		font-size: 20px;
+		margin-right: 10px;
+	}
+
+	/* Link Styles */
+	.col-md-3 .list-group-item a {
+		color: #0056b3;
+		text-decoration: none;
+	}
+
+	.col-md-3 .list-group-item a:hover {
+		text-decoration: underline;
+	}
+
+	/* Background Decoration (Optional) */
 	.crossedbg {
-		background-image: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png);
+		background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png) repeat;
 		position: absolute;
-		top: 27%;
-		bottom: 64%;
-		right: 15px;
+		width: 315px;
+		height: 30px;
+		top: 58px;
 		left: 15px;
-		z-index: 1;
-	}
-
-	/* Phần tử trong danh sách */
-	.list-group-item {
-		border: none !important;
-		border-bottom: 2px solid #d9d9d9 !important;
-		margin: 0 15px;
-		padding-left: 0;
-		padding-right: 0;
-		position: relative;
-	}
-
-	/* Bullet cho danh sách */
-	.list-group-item:before {
-		font-family: Arial, Helvetica, sans-serif;
-		color: #f5ce31;
-		content: "\2022";
-		font-size: 2.5em;
-		padding-right: 0.5em;
-		position: relative;
-		top: 0.10em;
-		left: 3%;
+		z-index: -1;
 	}
 
 	/* Loại bỏ đường viền cho phần tử cuối cùng */
@@ -279,9 +289,9 @@
 	<div class="container-fluid post-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
 			<div class="col-md-3">
+				<h3 style="font-weight: 900; margin: 15px 15px;">Categories</h3>
+				<div class="crossedbg"></div>
 				<ul class="list-group">
-					<h3 style="font-weight: 900; margin: 15px 15px;">Categories</h3>
-					<div class="crossedbg"></div>
 					<?php
 					$categories = get_categories();
 					foreach ($categories as $category) {
@@ -306,7 +316,7 @@
 								<div class="headlinesmonth-top">
 									<?php
 									$month_number = get_the_date('n'); // Lấy số tháng (1-12)
-									
+
 									// Chuyển đổi số tháng thành chữ số tương ứng
 									$month_name = date('m', mktime(0, 0, 0, $month_number, 10));
 
@@ -319,7 +329,7 @@
 								<?php
 								$full_year = get_the_date('Y'); // Lấy năm đầy đủ
 								$short_year = substr($full_year, -2); // Lấy hai số cuối cùng
-								
+
 								echo '<span class="year">\'' . $short_year . ' </span>'; // Hiển thị năm hai số cuối
 								?>
 							</div>
@@ -358,7 +368,7 @@
 						'post_status' => 'publish'
 					]);
 					foreach ($recent_posts as $post):
-						?>
+					?>
 						<div class="recent-post">
 							<div class="custom-headlines">
 								<ul class="custom-headlines-list">
@@ -416,7 +426,7 @@
 						$query->the_post();
 						$post_title = get_the_title(); // Lấy tên bài viết
 						$post_date = get_the_date(); // Lấy thời gian đăng bài viết
-						?>
+				?>
 
 						<div class="list_news">
 							<div class="headlines">
@@ -437,7 +447,7 @@
 							</div>
 						</div>
 
-						<?php
+				<?php
 					}
 				}
 				?>

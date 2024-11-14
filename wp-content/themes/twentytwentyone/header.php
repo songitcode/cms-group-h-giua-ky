@@ -52,7 +52,7 @@
 				</div>
 
 				<!-- Navigation Links -->
-				<div class="col-md-4">
+				<div class="col-md-4 nav-menu">
 					<nav class="nav text-dark">
 						<?php
 						// Display the list of categories with custom classes
