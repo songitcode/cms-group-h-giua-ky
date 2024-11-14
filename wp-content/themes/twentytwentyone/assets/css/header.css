@@ -1,0 +1,86 @@
+#site-header {
+  background-color: rgb(247 247 248);
+}
+.nav a {
+  color: gray !important;
+}
+
+.nav a:hover {
+  color: #333 !important;
+}
+
+.col-md-4 {
+  margin-left: 9rem;
+}
+
+.menu-item {
+  margin-left: -9rem;
+}
+
+.search-item,
+.user-account {
+  margin-left: -1rem !important;
+}
+
+.dropdown .dropdown-toggle::after {
+  margin-left: 75px;
+  margin-top: -12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.search-input {
+  border-radius: 3px !important;
+}
+
+.home-item {
+  display: inline-block;
+  padding: 20px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.home-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-item:hover a {
+  text-decoration: none;
+}
+
+.home-item:hover,
+.menu-item:hover,
+.search-item:hover,
+.user-account:hover {
+  background-color: #f0f0f0;
+}
+
+.site-title {
+  text-transform: none !important;
+}
+
+.justify-content-start {
+  margin-left: -8rem;
+}
+
+.dropdown-menu {
+  top: 5px !important;
+  left: 16px !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.dropdown-item {
+  margin: 5px 0;
+}

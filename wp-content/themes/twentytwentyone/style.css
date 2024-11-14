@@ -705,7 +705,6 @@ template {
 .comments-pagination,
 .post-navigation,
 .site-footer,
-.site-header,
 .alignwide,
 .wide-max-width {
 	max-width: var(--responsive--alignwide-width);

@@ -684,6 +684,39 @@ function enqueue_bootstrap_assets()
 
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_assets');
 
+class Walker_Category_Nav_Link extends Walker_Category {
+
+    // Start Level: Custom formatting for the category list
+    function start_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '<ul class="nav flex-column">'; // Add your desired class here
+    }
+
+    // End Level: Close the custom list
+    function end_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '</ul>';
+    }
+
+    // Start Element: Custom formatting for the category items
+    function start_el( &$output, $category, $depth = 0, $args = null, $id = 0 ) {
+        $cat_name = $category->name;
+        $cat_link = get_category_link( $category->term_id );
+
+        $output .= '<li class="nav-item">'; // Add your desired class here
+        $output .= '<a href="' . esc_url( $cat_link ) . '" class="nav-link">' . esc_html( $cat_name ) . '</a>';
+    }
+
+    // End Element: Closing the list item for category
+    function end_el( &$output, $category, $depth = 0, $args = null ) {
+        $output .= '</li>';
+    }
+}
+
+function my_theme_enqueue_styles() {
+    // Enqueue the main stylesheet
+    wp_enqueue_style('my-theme-style', get_template_directory_uri() . '/assets/css/header.css', array(), '1.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
 function custom_enqueue_styles()
 {
 	// Đảm bảo chỉ tải CSS nếu file tồn tại
