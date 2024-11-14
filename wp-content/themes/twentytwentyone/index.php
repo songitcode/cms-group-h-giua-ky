@@ -22,9 +22,25 @@ get_header(); ?>
 	</header><!-- .page-header -->
 <?php endif; ?>
 
-
+<div class="row">
+	<div class="col-lg-4">
+		<?php
+		get_template_part('template-parts/content/latest-posts-archive');
+		?>
+	</div>
+	<div class="col-lg-6">
+		<?php
+		get_template_part('patterns/post-list');
+		?>
+	</div>
+	<div class="col-lg-2">
+		<?php
+		get_template_part('template-parts/content/comments');
+		?>
+	</div>
+</div>
 <?php
-get_template_part('patterns/post-list');
+
 
 
 
