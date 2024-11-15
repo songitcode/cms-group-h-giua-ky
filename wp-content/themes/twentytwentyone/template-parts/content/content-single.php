@@ -51,12 +51,6 @@
 		text-align: justify;
 	}
 
-	/* Ảnh nền cho các cột */
-	.col-md-6,
-	.col-md-3 {
-		background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
-	}
-
 	/* Đường kẻ dưới cho ngày tháng */
 	.headlinesday {
 		border-bottom: 1px solid #000;
@@ -114,10 +108,8 @@
 	.crossedbg {
 		background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png) repeat;
 		position: absolute;
-		width: 315px;
-		height: 30px;
-		top: 58px;
-		left: 15px;
+		width: calc(100% - 29.8px);
+		height: 17px;
 		z-index: -1;
 	}
 
@@ -316,7 +308,7 @@
 								<div class="headlinesmonth-top">
 									<?php
 									$month_number = get_the_date('n'); // Lấy số tháng (1-12)
-
+									
 									// Chuyển đổi số tháng thành chữ số tương ứng
 									$month_name = date('m', mktime(0, 0, 0, $month_number, 10));
 
@@ -329,7 +321,7 @@
 								<?php
 								$full_year = get_the_date('Y'); // Lấy năm đầy đủ
 								$short_year = substr($full_year, -2); // Lấy hai số cuối cùng
-
+								
 								echo '<span class="year">\'' . $short_year . ' </span>'; // Hiển thị năm hai số cuối
 								?>
 							</div>
@@ -368,7 +360,7 @@
 						'post_status' => 'publish'
 					]);
 					foreach ($recent_posts as $post):
-					?>
+						?>
 						<div class="recent-post">
 							<div class="custom-headlines">
 								<ul class="custom-headlines-list">
@@ -426,7 +418,7 @@
 						$query->the_post();
 						$post_title = get_the_title(); // Lấy tên bài viết
 						$post_date = get_the_date(); // Lấy thời gian đăng bài viết
-				?>
+						?>
 
 						<div class="list_news">
 							<div class="headlines">
@@ -447,7 +439,7 @@
 							</div>
 						</div>
 
-				<?php
+						<?php
 					}
 				}
 				?>
