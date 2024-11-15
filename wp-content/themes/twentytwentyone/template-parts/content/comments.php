@@ -27,7 +27,7 @@
         color: #72AEDA;
     }
 </style>
-<div class="comments">
+<div class="comments mt-3">
     <div class="section-title-comments">
         <h2>Comments</h2>
         <div class="line"></div>

@@ -13,7 +13,7 @@
         while ($query->have_posts()):
             $query->the_post();
             ?>
-            <div class="timeline">
+            <div class="timeline mt-3">
                 <div class="timeline-item">
                     <div class="date">
                         <span class="day"><?php the_time('d'); ?></span>
